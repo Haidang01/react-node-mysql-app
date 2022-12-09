@@ -1,0 +1,101 @@
+.profile {
+  background-color: #fafafa;
+  box-shadow: -1px 15px 17px -8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  .images {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .cover {
+      width: 100%;
+      margin: 0 5px;
+      height: 40vh;
+      object-fit: cover;
+    }
+    .profilePic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: absolute;
+      top: 80%;
+      right: 68%;
+    }
+  }
+  .profileContainer {
+    background-color: #fff;
+    margin: 0 20px;
+
+    .uInfo {
+      background-color: #fff;
+      border-radius: 20px;
+      .center {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 10px;
+        margin-bottom: 20px;
+        span:first-child {
+          font-size: 40px;
+          font-weight: bold;
+        }
+      }
+    }
+    .info {
+      padding: 20px 10px;
+      background-color: #fff;
+      display: flex;
+      gap: 30px;
+      justify-content: space-around;
+      box-shadow: -1px 15px 17px -8px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      margin-bottom: 30px;
+      .items {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        .item {
+          display: flex;
+        }
+      }
+      .button {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .follow {
+          border: none;
+          background-color: #5271ff;
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          &:hover {
+            background-color: #788bde;
+          }
+        }
+        .edit {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          justify-content: space-between;
+          border: none;
+          background-color: #3a3b3c;
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          &:hover {
+            background-color: rgb(104, 93, 93);
+          }
+        }
+      }
+    }
+  }
+  hr {
+    margin: 10px 15px;
+    border: none;
+    height: 0.5px;
+    background-color: lightgray;
+  }
+}

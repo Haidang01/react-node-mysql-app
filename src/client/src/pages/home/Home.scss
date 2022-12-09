@@ -1,0 +1,7 @@
+.home {
+  background-color: #fafafa;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

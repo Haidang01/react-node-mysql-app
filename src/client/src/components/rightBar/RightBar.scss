@@ -1,0 +1,106 @@
+.rightBar {
+  mask-position: left bottom;
+  -webkit-mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 17px, black 17px);
+  -webkit-mask-size: 100% 20000px;
+  -webkit-mask-position: left bottom;
+  transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+  &:hover {
+    -webkit-mask-position: left top;
+  }
+  &::-webkit-scrollbar {
+    background-color: lightgray !important;
+    width: 10px !important;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px !important;
+    background-color: gray !important;
+  }
+  flex: 2.2;
+  overflow-y: scroll;
+  height: 90vh;
+  position: sticky;
+  top: 10vh;
+  .container {
+    padding: 0 10px;
+    .item {
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding: 10px;
+      -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      span {
+        color: gray;
+      }
+      .user {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 10px 0;
+        .userInfo {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          position: relative;
+
+          span {
+            color: #000;
+          }
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .online {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: lightgreen;
+            position: absolute;
+            top: 0;
+            left: 25px;
+            z-index: 99;
+          }
+          p {
+            color: gray;
+            font-size: 11px;
+
+            span {
+              font-size: 13px;
+              font-weight: 500;
+              color: #000;
+            }
+          }
+        }
+        .span {
+          font-size: 10px;
+        }
+        .buttons {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          button {
+            border: none;
+            padding: 5px;
+            color: #fff;
+            cursor: pointer;
+            &:first-child {
+              background-color: #5271ff;
+            }
+            &:last-child {
+              background-color: #f0544f;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .rightBar {
+    display: none;
+  }
+}

@@ -1,0 +1,77 @@
+.leftBar {
+  &::-webkit-scrollbar {
+    background-color: #fafafa !important;
+    width: 10px !important;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px !important;
+    background-color: rgb(151, 150, 150) !important;
+  }
+  mask-position: left bottom;
+  -webkit-mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 17px, black 17px);
+  -webkit-mask-size: 100% 20000px;
+  -webkit-mask-position: left bottom;
+  transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+  mask-position: left bottom;
+  &:hover {
+    -webkit-mask-position: left top;
+  }
+  flex: 1.7;
+  overflow-y: scroll;
+  height: 90vh;
+  position: sticky;
+  top: 10vh;
+  background-color: #fafafa;
+  .container {
+    padding: 20px;
+    hr {
+      margin: 20px 0px;
+      border: none;
+      height: 0.5px;
+      background-color: lightgray;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      span {
+        font-size: 12px;
+      }
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+
+        img {
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        img {
+          width: 28px;
+          height: 28px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .leftBar {
+    display: none;
+  }
+}
