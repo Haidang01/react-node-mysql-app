@@ -26,3 +26,15 @@ export const updateUser = async (req, res) => {
     })
   })
 }
+export const getAllUser = async (req, res) => {
+  const q = 'SELECT * FROM users  WHERE id != ?';
+  db.query(q, [req.userId], (err, result) => {
+    if (err) return res.status(500).json(err)
+    if (result.length === 0) return res.status(404).json('User not exist');
+    const users = result.map(user => {
+      const { password, ...others } = user;
+      return others;
+    })
+    return res.status(200).json(users);
+  })
+}

@@ -34,3 +34,6 @@ export const addComment = (data) => API.post(`/api/comments`, data);
 
 export const getRelationships = (userId) => API.get(`/api/relationships/${userId}`);
 export const addRelationship = (userId) => API.post(`/api/relationships/${userId}`);
+
+//Users
+export const getAllUser = (userId) => API.get(`/api/users`);
